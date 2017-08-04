@@ -12,3 +12,53 @@ function getRealPath(){
   var realPath=localhostPaht+projectName;
   alert(realPath);
 }
+http://www.cnblogs.com/haimishasha
+<script type="text/javascript">
+    var app = '@Request.ApplicationPath';
+    if (app.charAt(app.length - 1) == '/') app = app.substr(0, app.length - 1);
+</script>
+
+
+
+
+http://www.cnblogs.com/haimishasha/p/6209413.html?name=maimai#wowowo
+function getRootPath_dc() {
+  var pathName = window.location.pathname.substring(1);
+  var webName = pathName == '' ? '' : pathName.substring(0, pathName.indexOf('/'));
+  if (webName == "") {
+    return window.location.protocol + '//' + window.location.host;
+  }
+  else {
+    return window.location.protocol + '//' + window.location.host + '/' + webName;
+  }
+}
+"http://www.cnblogs.com/haimishasha"
+
+http://www.cnblogs.com/haimishasha/p/6209413.html?name=maimai#wowowo
+
+window.location.hash
+"#wowowo"
+
+window.location.host
+"www.cnblogs.com"
+
+window.location.hostname
+"www.cnblogs.com"
+
+window.location.href
+"http://www.cnblogs.com/haimishasha/p/6209413.html?name=maimai#wowowo"
+
+window.location.pathname
+"/haimishasha/p/6209413.html"
+
+window.location.search
+"?name=maimai"
+
+window.location.origin
+"http://www.cnblogs.com"
+
+window.location.port
+""
+
+window.location.protocol
+"http:"
