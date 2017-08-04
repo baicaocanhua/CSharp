@@ -62,3 +62,19 @@ window.location.port
 
 window.location.protocol
 "http:"
+默认的 RouteTable.Routes.RouteExistingFiles = false; 
+
+<handlers>
+      <remove name="BlockViewHandler"/>
+      <add name="BlockViewHandler" path="*.cshtml" verb="*" preCondition="integratedMode" type="System.Web.HttpNotFoundHandler" />
+    </handlers>
+
+所以要解决这个问题，看了一下msdn关于Web.config的章节，找到了一个 System.Web.StaticFileHandler 的Handler，看字面的意思估计靠谱，直接放到 NotFoundHandler 前面。
+
+ 
+
+<httpHandlers>
+      <add verb="GET,HEAD" path="*.html" type="System.Web.StaticFileHandler"/>
+      <add path="*" verb="*"
+          type="System.Web.HttpNotFoundHandler"/>
+</httpHandlers>
